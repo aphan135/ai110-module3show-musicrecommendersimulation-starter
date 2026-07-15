@@ -104,6 +104,7 @@ def score_song(user_prefs: Dict, song: Dict) -> Tuple[float, List[str]]:
     score = 0.0
     reasons: List[str] = []
 
+    # Baseline weights used by the starter logic and tests.
     genre_weight = 2.0
     mood_weight = 1.0
     energy_weight = 2.0

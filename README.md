@@ -140,6 +140,16 @@ Use this section to document the experiments you ran. For example:
 - What happened when you added tempo or valence to the score
 - How did your system behave for different types of users
 
+### Prompt for explaining a top-ranked result
+
+You can ask your AI coding assistant to explain why a specific song ranked first by using a prompt like this:
+
+```text
+In the music recommender project, explain why the song "Sunrise City" ranked first for the default profile using the current weights in src/recommender.py. Please reference the scoring logic for genre, mood, energy, and any other factors that contributed to the result.
+```
+
+If the same song keeps appearing at the top of every list, that may indicate the genre weight is too strong or the dataset is too small to provide enough variety.
+
 ---
 
 ## Limitations and Risks
@@ -158,14 +168,11 @@ You will go deeper on this in your model card.
 
 ## Reflection
 
-Read and complete `model_card.md`:
+Read and complete [model_card.md](model_card.md).
 
-[**Model Card**](model_card.md)
+My biggest learning moment was seeing how a simple scoring rule could make a recommender feel thoughtful, even when the system was still very basic. I also learned that small design choices, such as how much weight to give genre or energy, can change the results a lot.
 
-Write 1 to 2 paragraphs here about what you learned:
-
-- about how recommenders turn data into predictions
-- about where bias or unfairness could show up in systems like this
+Using AI tools helped me move faster when I needed help writing code, testing profiles, and explaining the ranking logic. I still had to double-check the outputs, especially when the results looked surprising or when I changed the weights, because the math and the interpretation are not always the same. I was surprised that even a simple algorithm could feel like a real recommendation system because it picked up obvious patterns in a believable way. If I extended this project, I would add more songs, more features, and a more balanced scoring formula so the recommendations feel more diverse and less repetitive.
 
 
 
